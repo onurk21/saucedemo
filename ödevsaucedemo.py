@@ -4,7 +4,8 @@ from time import sleep
 
 
 class TestSaucedemo:
-    def test_kullanici_adi_ve_sifre_bos_iken_mesaj_donmesi(self):
+    #boş veri girilerek test yapar
+    def test_kullanici_adi_ve_sifre_bos_iken_hata_donmesi(self):
         driver = webdriver.Chrome()
         driver.maximize_window()
         driver.get("https://www.saucedemo.com/")
@@ -26,14 +27,14 @@ class TestSaucedemo:
         current_message = error_message_container.text
         status = expected_message == current_message
 
-        print("\nKullanıcı adı ve şifre boş iken mesaj dönmesi testi")
-        print(f"Mesaj: {current_message}")
-        print(f"Beklenen Mesaj: {expected_message}")
+        print("\nKullanıcı adı ve şifre boş iken hata dönmesi testi")
+        print(f"Hata: {current_message}")
+        print(f"Beklenen Hata: {expected_message}")
         print(f"Test Durumu: {'Başarılı' if status else 'Başarısız'}")
 
         sleep(3)
-
-    def test_sifre_bos_iken_mesaj_donmesi(self):
+#şifre boşken gelen hatayı görüntüler
+    def test_sifre_bos_iken_hata_donmesi(self):
      driver = webdriver.Chrome()
      driver.maximize_window()
      driver.get("https://www.saucedemo.com/")
@@ -56,14 +57,14 @@ class TestSaucedemo:
      current_message = error_message_container.text
      status = expected_message == current_message
 
-     print("\nŞifre boş iken mesaj dönmesi testi")
-     print(f"Mesaj: {current_message}")
-     print(f"Beklenen Mesaj: {expected_message}")
+     print("\nŞifre boş iken Hata dönmesi testi")
+     print(f"Hata: {current_message}")
+     print(f"Beklenen Hata: {expected_message}")
      print(f"Test Durumu: {'Başarılı' if status else 'Başarısız'}")
 
      sleep(3)
-
-    def test_kilitli_kullanici_girildiginde_mesaj_donmesi(self):
+#kilitli kullanıcadaki hatayı gösterir
+    def test_kilitli_kullanici_girildiginde_Hata_donmesi(self):
      driver = webdriver.Chrome()
      driver.maximize_window()
      driver.get("https://www.saucedemo.com/")
@@ -86,14 +87,14 @@ class TestSaucedemo:
      current_message = error_message_container.text
      status = expected_message == current_message
 
-     print("\nKilitli kullanıcı girildiğinde mesaj dönmesi testi")
-     print(f"Mesaj: {current_message}")
-     print(f"Beklenen Mesaj: {expected_message}")
+     print("\nKilitli kullanıcı girildiğinde Hata dönmesi testi")
+     print(f"Hata: {current_message}")
+     print(f"Beklenen Hata: {expected_message}")
      print(f"Test Durumu: {'Başarılı' if status else 'Başarısız'}")
 
      sleep(3)
-
-    def test_X_butonuna_tiklama(self):
+# x butonuna basar
+    def test_X_iconuna_tiklama(self):
      driver = webdriver.Chrome()
      driver.maximize_window()
      driver.get("https://www.saucedemo.com/")
@@ -117,10 +118,10 @@ class TestSaucedemo:
 
      error_button.click()
 
-     print("\nX butonuna tıklama testi")
+     print("\nX iconuna tıklama testi")
 
      sleep(3)
-
+#https://www.saucedemo.com/inventory.html  açılıyormu ona bakar
     def test_standart_kullanici_girildiginde_inventoryhtml_donmesi(self):
      driver = webdriver.Chrome()
      driver.maximize_window()
@@ -143,14 +144,14 @@ class TestSaucedemo:
      expected_url = "https://www.saucedemo.com/inventory.html"
      status = current_url == expected_url
 
-     print("\nStandart kullanıcı girildiğinde url dönmesi testi")
+     print("\nStandart kullanıcı girildiğinde inventory.html dönmesi testi")
      print(f"Url: {current_url}")
      print(f"Beklenen Url: {expected_url}")
      print(f"Test Durumu: {'Başarılı' if status else 'Başarısız'}")
 
      sleep(3)
-
-    def test_6_urun_listesi_donmesi(self):
+# 6 ürün listeleniyormu onu kontrol eder.
+    def test_6_urun_listesi(self):
      driver = webdriver.Chrome()
      driver.maximize_window()
      driver.get("https://www.saucedemo.com/")
@@ -172,7 +173,7 @@ class TestSaucedemo:
      expected_item_count = 6
      status = len(items) == expected_item_count
 
-     print("\nÜrün listesi dönmesi testi")
+     print("\nÜrün listesi testi")
      print(f"Ürün Sayısı: {len(items)}")
      print(f"Beklenen Ürün Sayısı: {expected_item_count}")
      print(f"Test Durumu: {'Başarılı' if status else 'Başarısız'}")
@@ -180,9 +181,9 @@ class TestSaucedemo:
     sleep(3)
 testClass = TestSaucedemo()
 
-testClass.test_kullanici_adi_ve_sifre_bos_iken_mesaj_donmesi()
-testClass.test_sifre_bos_iken_mesaj_donmesi()
-testClass.test_kilitli_kullanici_girildiginde_mesaj_donmesi()
-testClass.test_X_butonuna_tiklama()
+testClass.test_kullanici_adi_ve_sifre_bos_iken_Hata_donmesi()
+testClass.test_sifre_bos_iken_Hata_donmesi()
+testClass.test_kilitli_kullanici_girildiginde_Hata_donmesi()
+testClass.test_X_iconuna_tiklama()
 testClass.test_standart_kullanici_girildiginde_inventoryhtml_donmesi()
-testClass.test_6_urun_listesi_donmesi()
+testClass.test_6_urun_listesi()
