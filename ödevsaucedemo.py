@@ -5,7 +5,7 @@ from time import sleep
 
 class TestSaucedemo:
     #boş veri girilerek test yapar
-    def test_kullanici_adi_ve_sifre_bos_iken_hata_donmesi(self):
+    def test_kullanici_adi_ve_sifre_bos_iken_Hata_donmesi(self):
         driver = webdriver.Chrome()
         driver.maximize_window()
         driver.get("https://www.saucedemo.com/")
@@ -34,7 +34,7 @@ class TestSaucedemo:
 
         sleep(3)
 #şifre boşken gelen hatayı görüntüler
-    def test_sifre_bos_iken_hata_donmesi(self):
+    def test_sifre_bos_iken_Hata_donmesi(self):
      driver = webdriver.Chrome()
      driver.maximize_window()
      driver.get("https://www.saucedemo.com/")
