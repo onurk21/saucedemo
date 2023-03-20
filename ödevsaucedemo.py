@@ -31,7 +31,7 @@ class TestSaucedemo:
         print(f"Beklenen Mesaj: {expected_message}")
         print(f"Test Durumu: {'Başarılı' if status else 'Başarısız'}")
 
-        sleep(2)
+        sleep(3)
 
     def test_sifre_bos_iken_mesaj_donmesi(self):
      driver = webdriver.Chrome()
@@ -61,7 +61,7 @@ class TestSaucedemo:
      print(f"Beklenen Mesaj: {expected_message}")
      print(f"Test Durumu: {'Başarılı' if status else 'Başarısız'}")
 
-     sleep(2)
+     sleep(3)
 
     def test_kilitli_kullanici_girildiginde_mesaj_donmesi(self):
      driver = webdriver.Chrome()
@@ -91,7 +91,7 @@ class TestSaucedemo:
      print(f"Beklenen Mesaj: {expected_message}")
      print(f"Test Durumu: {'Başarılı' if status else 'Başarısız'}")
 
-     sleep(2)
+     sleep(3)
 
     def test_X_butonuna_tiklama(self):
      driver = webdriver.Chrome()
@@ -119,7 +119,7 @@ class TestSaucedemo:
 
      print("\nX butonuna tıklama testi")
 
-     sleep(2)
+     sleep(3)
 
     def test_standart_kullanici_girildiginde_inventoryhtml_donmesi(self):
      driver = webdriver.Chrome()
@@ -148,7 +148,7 @@ class TestSaucedemo:
      print(f"Beklenen Url: {expected_url}")
      print(f"Test Durumu: {'Başarılı' if status else 'Başarısız'}")
 
-     sleep(2)
+     sleep(3)
 
     def test_6_urun_listesi_donmesi(self):
      driver = webdriver.Chrome()
@@ -177,7 +177,7 @@ class TestSaucedemo:
      print(f"Beklenen Ürün Sayısı: {expected_item_count}")
      print(f"Test Durumu: {'Başarılı' if status else 'Başarısız'}")
 
-    sleep(2)
+    sleep(3)
 testClass = TestSaucedemo()
 
 testClass.test_kullanici_adi_ve_sifre_bos_iken_mesaj_donmesi()
